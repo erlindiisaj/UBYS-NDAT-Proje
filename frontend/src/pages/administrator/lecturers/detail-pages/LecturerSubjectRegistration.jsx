@@ -186,11 +186,11 @@ const LecturerSubjectRegistration = () => {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Ders Atamasını Onayla"}
+          {"Course Assignments Confirmation"}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Ders atamasını onaylamak istediğinize emin misiniz?
+            Do you want to confirm the course assignments?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -233,7 +233,7 @@ const LecturerSubjectRegistration = () => {
           color="success"
           variant="contained"
         >
-          Ders Atamasını Onayla
+          Confirm Course Assignments
         </Button>
       </Box>
       <Box
@@ -252,13 +252,13 @@ const LecturerSubjectRegistration = () => {
           }}
         >
           <FormControl size="small" fullWidth>
-            <InputLabel id="demo-simple-select-label">Fakülte</InputLabel>
+            <InputLabel id="demo-simple-select-label">Faculty</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={faculty}
               name="faculty"
-              label="Fakülte"
+              label="Faculty"
               onChange={handleChange}
             >
               {FACULTIES.map((faculty, index) => (
@@ -269,13 +269,13 @@ const LecturerSubjectRegistration = () => {
             </Select>
           </FormControl>
           <FormControl size="small" fullWidth>
-            <InputLabel id="demo-simple-select-label">Bölüm</InputLabel>
+            <InputLabel id="demo-simple-select-label">Department</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={department}
               name="department"
-              label="Bölüm"
+              label="Department"
               onChange={handleChange}
             >
               {departments.map((department, index) => (
@@ -323,16 +323,16 @@ const LecturerSubjectRegistration = () => {
                       width: "20%",
                     }}
                   >
-                    Ders Adı
+                    Course Name
                   </TableCell>
                   <TableCell
                     sx={{
                       width: "20%",
                     }}
                   >
-                    Fakülte/Bölüm
+                    Faculty/Dep
                   </TableCell>
-                  <TableCell>Dönem</TableCell>
+                  <TableCell>Semester</TableCell>
                   <TableCell>Kredi</TableCell>
                   <TableCell>AKTS</TableCell>
                   <TableCell></TableCell>
@@ -377,16 +377,16 @@ const LecturerSubjectRegistration = () => {
                     width: "15%",
                   }}
                 >
-                  Kodu
+                  Code
                 </TableCell>
                 <TableCell
                   sx={{
                     width: "30%",
                   }}
                 >
-                  Ders Adı
+                  Course Name
                 </TableCell>
-                <TableCell>Fakülte / Bölüm</TableCell>
+                <TableCell>Faculty/Dep</TableCell>
                 <TableCell align="center">Kredi</TableCell>
                 <TableCell></TableCell>
               </TableRow>

@@ -152,7 +152,7 @@ const StudentTableRow = ({ data, ssn, name }) => {
           borderRight: `1px solid ${theme.palette.grey[500]}`,
         }}
       >
-        <Typography variant="caption">1. Sınıf</Typography>
+        <Typography variant="caption">1. Year</Typography>
       </Box>
 
       <Box
@@ -184,7 +184,7 @@ const StudentTableRow = ({ data, ssn, name }) => {
           variant="outlined"
           color="primary"
         >
-          Detay
+          Details
         </Button>
         <StyledMenu
           id="demo-customized-menu"
@@ -203,7 +203,7 @@ const StudentTableRow = ({ data, ssn, name }) => {
             disableRipple
           >
             <HistoryEduRoundedIcon />
-            Transkriptini Görüntüle
+            View Transcript
           </MenuItem>
 
           <MenuItem
@@ -214,7 +214,7 @@ const StudentTableRow = ({ data, ssn, name }) => {
             disableRipple
           >
             <PersonOutlineTwoToneIcon />
-            Öğrenci Bilgileri
+            Students Information
           </MenuItem>
           <Divider sx={{ my: 0.5 }} />
 
@@ -226,7 +226,7 @@ const StudentTableRow = ({ data, ssn, name }) => {
             disableRipple
           >
             <InsertDriveFileRoundedIcon />
-            Ders Kayıtlanması
+            Course Registration
           </MenuItem>
           {/* <MenuItem
             onClick={() => {

@@ -166,7 +166,7 @@ const LecturerTableRow = ({ data }) => {
           variant="outlined"
           color="primary"
         >
-          Detay
+          Details
         </Button>
         <StyledMenu
           id="demo-customized-menu"
@@ -179,23 +179,23 @@ const LecturerTableRow = ({ data }) => {
         >
           <MenuItem
             onClick={() => {
-              navigate(`/home/dersler/${lecturerId}`);
+              navigate(`/home/courses/${lecturerId}`);
               handleClose();
             }}
             disableRipple
           >
             <HistoryEduRoundedIcon />
-            Dersleri
+            Courses
           </MenuItem>
           <MenuItem
             onClick={() => {
-              navigate(`/home/ders-atanmasi/${lecturerId}`);
+              navigate(`/home/course-assignments/${lecturerId}`);
               handleClose();
             }}
             disableRipple
           >
             <HistoryEduRoundedIcon />
-            Ders Atamasi
+            Course Assignments
           </MenuItem>
         </StyledMenu>
       </Box>

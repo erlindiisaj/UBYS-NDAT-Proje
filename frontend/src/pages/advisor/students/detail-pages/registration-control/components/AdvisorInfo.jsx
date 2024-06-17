@@ -35,7 +35,7 @@ const AdvisorInfo = () => {
           justifyContent: "center",
         }}
       >
-        <Typography variant="caption">Ad Soyad:</Typography>
+        <Typography variant="caption">Name Surname:</Typography>
         <Typography variant="caption">Email:</Typography>
         <Typography variant="caption">Tel:</Typography>
       </Box>

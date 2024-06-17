@@ -40,7 +40,7 @@ const TranscriptTable = ({ data }) => {
           marginY: 1,
         }}
       >
-        <Typography variant="subtitle1">Yarıyıl</Typography>
+        <Typography variant="subtitle1">Semester</Typography>
         <Typography
           variant="subtitle1"
           sx={{
@@ -68,9 +68,9 @@ const TranscriptTable = ({ data }) => {
             }}
           >
             <TableRow colSpan={8}>
-              <TableCell colSpan={1}>Ders Kodu</TableCell>
-              <TableCell colSpan={4}>Ders Adı</TableCell>
-              <TableCell colSpan={1}>Kredi</TableCell>
+              <TableCell colSpan={1}>Course Code</TableCell>
+              <TableCell colSpan={4}>Name</TableCell>
+              <TableCell colSpan={1}>Credit</TableCell>
               <TableCell colSpan={1}>AKTS</TableCell>
               <TableCell colSpan={1}>HBN</TableCell>
             </TableRow>
@@ -124,19 +124,19 @@ const TranscriptTable = ({ data }) => {
                 sx={{ borderRight: `1px solid ${theme.palette.divider}` }}
                 align="center"
               >
-                Alınan Kredi
+                Selected Credit
               </TableCell>
               <TableCell
                 sx={{ borderRight: `1px solid ${theme.palette.divider}` }}
                 align="center"
               >
-                Tamamlanan Kredi
+                Completed Credit
               </TableCell>
               <TableCell
                 align="center"
                 sx={{ borderRight: `1px solid ${theme.palette.divider}` }}
               >
-                Puan
+                Points
               </TableCell>
               <TableCell
                 align="center"
@@ -162,7 +162,7 @@ const TranscriptTable = ({ data }) => {
                 align="right"
                 colSpan={3}
               >
-                Yıllık:
+                Total:
               </TableCell>
               <TableCell
                 sx={{ borderRight: `1px solid ${theme.palette.divider}` }}
@@ -208,7 +208,7 @@ const TranscriptTable = ({ data }) => {
                 align="right"
                 colSpan={3}
               >
-                Birikimli:
+                Cumulative:
               </TableCell>
               <TableCell
                 sx={{ borderRight: `1px solid ${theme.palette.divider}` }}

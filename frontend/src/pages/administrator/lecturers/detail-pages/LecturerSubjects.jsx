@@ -82,20 +82,20 @@ const LecturerSubjects = () => {
               }}
             >
               <TableRow>
-                <TableCell>Ders Kodu</TableCell>
+                <TableCell>Course Code</TableCell>
                 <TableCell
                   sx={{
                     width: "30%",
                   }}
                 >
-                  Ders Adı
+                  Name
                 </TableCell>
                 <TableCell
                   sx={{
                     width: "30%",
                   }}
                 >
-                  Fakülte / Bölüm
+                  Faculty / Dep
                 </TableCell>
                 <TableCell>Kredi</TableCell>
                 <TableCell>AKTS</TableCell>

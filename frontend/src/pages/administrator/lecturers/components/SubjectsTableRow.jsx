@@ -61,7 +61,7 @@ const SubjectsTableRow = ({ subject, toControl }) => {
           variant="contained"
           disabled={isSelected}
         >
-          Ekle
+          Add
         </Button>
       </TableCell>
     </TableRow>

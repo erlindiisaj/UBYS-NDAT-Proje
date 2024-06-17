@@ -20,11 +20,11 @@ const AdministratorRoutes = [
     element: <EditProfile />,
   },
   {
-    path: "dersler/:id",
+    path: "courses/:id",
     element: <LecturerSubjects />,
   },
   {
-    path: "ders-atanmasi/:id",
+    path: "course-assignments/:id",
     element: <LecturerSubjectRegistration />,
   },
 ];

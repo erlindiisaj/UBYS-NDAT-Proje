@@ -47,9 +47,9 @@ const StudentInfo = () => {
             }}
           />
           <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <Typography variant="caption">Ad Soyad:</Typography>
-            <Typography variant="caption">Öğrenci No:</Typography>
-            <Typography variant="caption">Kimlik No:</Typography>
+            <Typography variant="caption">Name Surname:</Typography>
+            <Typography variant="caption">Student No:</Typography>
+            <Typography variant="caption">ID No:</Typography>
           </Box>
         </Box>
         <Box
@@ -58,8 +58,8 @@ const StudentInfo = () => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="caption">Yıl:</Typography>
-          <Typography variant="caption">Dönem:</Typography>
+          <Typography variant="caption">Year:</Typography>
+          <Typography variant="caption">Semester:</Typography>
           <Typography variant="caption">Max AKTS:</Typography>
           <Typography variant="caption">Min AKTS:</Typography>
         </Box>
@@ -69,12 +69,10 @@ const StudentInfo = () => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="caption">Kayıtlanacağı Sınıf:</Typography>
-          <Typography variant="caption">
-            Kayıtlanacağı Eğitim Dönemi:
-          </Typography>
-          <Typography variant="caption">Kayıtlanacağı Ders Dönemi:</Typography>
-          <Typography variant="caption">Kayıt Aşaması:</Typography>
+          <Typography variant="caption">Registration Year:</Typography>
+          <Typography variant="caption">Registration Semester:</Typography>
+          <Typography variant="caption">Registration Year Semester:</Typography>
+          <Typography variant="caption">State:</Typography>
         </Box>
         <Box
           sx={{

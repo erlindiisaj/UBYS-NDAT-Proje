@@ -32,7 +32,7 @@ const DownloadAsExcel = ({ data }) => {
       variant="contained"
       onClick={handleDownload}
     >
-      Listeyi Excel olarak al.
+      Download As Excel
     </Button>
   );
 };

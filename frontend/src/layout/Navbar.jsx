@@ -87,7 +87,7 @@ export default function Navbar() {
                 color={theme.palette.text.primary}
                 variant="subtitle2"
               >
-                Anasayfa
+                Home Page
               </Typography>
             </ListItemButton>
           </ListItem>

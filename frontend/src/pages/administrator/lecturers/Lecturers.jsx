@@ -6,97 +6,6 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectUserToken } from "store/user/user.selector";
 
-const LECTURERS = [
-  {
-    id: 1,
-    name: "Prof. Dr. Ahmet Yıldız",
-    number: "123456",
-    department: "Bilgisayar Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 2,
-    name: "Prof. Dr. Ayşe Demir",
-    number: "654321",
-    department: "Elektrik-Elektronik Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 3,
-    name: "Doç. Dr. Mehmet Kara",
-    number: "112233",
-    department: "Makine Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 4,
-    name: "Yrd. Doç. Dr. Zeynep Kaya",
-    number: "334455",
-    department: "İnşaat Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 5,
-    name: "Prof. Dr. Ali Vural",
-    number: "556677",
-    department: "Kimya Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 6,
-    name: "Dr. Öğr. Üyesi Elif Yılmaz",
-    number: "778899",
-    department: "Endüstri Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 7,
-    name: "Prof. Dr. Burak Can",
-    number: "998877",
-    department: "Bilgisayar Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 8,
-    name: "Doç. Dr. Cemal Aydın",
-    number: "223344",
-    department: "Elektrik-Elektronik Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 9,
-    name: "Yrd. Doç. Dr. Deniz Öz",
-    number: "556688",
-    department: "Makine Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 10,
-    name: "Prof. Dr. Fatma Çelik",
-    number: "112244",
-    department: "İnşaat Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-  {
-    id: 11,
-    name: "Dr. Öğr. Üyesi Gökhan Şahin",
-    number: "334466",
-    department: "Kimya Mühendisliği",
-    faculty: "Mühendislik",
-    status: "Aktif",
-  },
-];
-
 const Lecturers = () => {
   const theme = useTheme();
   const token = useSelector(selectUserToken);
@@ -161,7 +70,7 @@ const Lecturers = () => {
               borderRight: `1px solid ${theme.palette.grey[500]}`,
             }}
           >
-            <Typography variant="subtitle2">Resim</Typography>
+            <Typography variant="subtitle2">Img</Typography>
           </Box>
           <Box
             sx={{
@@ -172,7 +81,7 @@ const Lecturers = () => {
               borderRight: `1px solid ${theme.palette.grey[500]}`,
             }}
           >
-            <Typography variant="subtitle2">Numerası</Typography>
+            <Typography variant="subtitle2">Number</Typography>
           </Box>{" "}
           <Box
             sx={{
@@ -183,7 +92,7 @@ const Lecturers = () => {
               borderRight: `1px solid ${theme.palette.grey[500]}`,
             }}
           >
-            <Typography variant="subtitle2">Ad Soyad</Typography>
+            <Typography variant="subtitle2">Name Surname</Typography>
           </Box>{" "}
           <Box
             sx={{
@@ -194,7 +103,7 @@ const Lecturers = () => {
               borderRight: `1px solid ${theme.palette.grey[500]}`,
             }}
           >
-            <Typography variant="subtitle2">Fakülte/Bölüm</Typography>
+            <Typography variant="subtitle2">Faculty/Dep</Typography>
           </Box>{" "}
           <Box
             sx={{
@@ -205,7 +114,7 @@ const Lecturers = () => {
               borderRight: `1px solid ${theme.palette.grey[500]}`,
             }}
           >
-            <Typography variant="subtitle2">Durum</Typography>
+            <Typography variant="subtitle2">State</Typography>
           </Box>{" "}
           <Box
             sx={{
@@ -214,7 +123,7 @@ const Lecturers = () => {
               alignItems: "center",
             }}
           >
-            <Typography variant="subtitle2">İşlemler</Typography>
+            <Typography variant="subtitle2">More</Typography>
           </Box>
         </Box>
         {data.map((lecturer, index) => (

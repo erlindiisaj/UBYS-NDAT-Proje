@@ -32,7 +32,7 @@ const SubjectsList = () => {
         }}
       >
         {" "}
-        <Typography variant="caption">Seçilmiş Dersler</Typography>
+        <Typography variant="caption">Selected Courses</Typography>
       </Box>
       <Box
         sx={{
@@ -43,17 +43,17 @@ const SubjectsList = () => {
           <Table>
             <TableHead sx={{ backgroundColor: theme.palette.grey[300] }}>
               <TableRow>
-                <TableCell size="small">Ders Kodu</TableCell>
+                <TableCell size="small">Course Code</TableCell>
                 <TableCell
                   sx={{
                     width: "30%",
                   }}
                 >
-                  Ders Adı
+                  Name
                 </TableCell>
-                <TableCell size="small">Dönemi</TableCell>
+                <TableCell size="small">Semester</TableCell>
                 <TableCell size="small">AKTS</TableCell>
-                <TableCell size="small"> Açıklama</TableCell>
+                <TableCell size="small">Explanation</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

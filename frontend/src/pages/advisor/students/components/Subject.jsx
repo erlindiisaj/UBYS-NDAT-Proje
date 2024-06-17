@@ -16,7 +16,7 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
-const Ders = ({ data }) => {
+const Course = ({ data }) => {
   const { subjectName, subjectCode, akts, subeler, aciklama, limit } = data;
 
   const [age, setAge] = useState("");
@@ -29,8 +29,8 @@ const Ders = ({ data }) => {
   const handleAdd = (e) => {
     e.preventDefault();
 
-    if (selectedAkts + akts > 35) {
-      toast.error("35 AKTS'den fazla ders seçemezsiniz!");
+    if (selectedAkts + akts > 45) {
+      toast.error("Can not select more than 45 AKTS!");
       return;
     } else dispatch(addSubjectToStore(selectedSubjects, data));
   };
@@ -139,4 +139,4 @@ const Ders = ({ data }) => {
   );
 };
 
-export default Ders;
+export default Course;

@@ -13,16 +13,43 @@ import {
 } from "@mui/material";
 import { useTheme, styled, alpha } from "@mui/material/styles";
 import ViewIcon from "assets/view-icon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CourseTableRow from "./components/CourseTableRow";
+import axios from "axios";
+
+import { useSelector } from "react-redux";
+import { selectUserToken } from "store/user/user.selector";
 
 const Courses = () => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const token = useSelector(selectUserToken);
+  const [courses, setCourses] = useState([]);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
+  useEffect(() => {
+    axios
+      .get(
+        "http://localhost:5158/api/University/Faculty/Department/Lecturer/Courses",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          params: {
+            DepartmentName: "BM", //! Hardcoded for now
+          },
+        }
+      )
+      .then((res) => {
+        setCourses(res.data.courses);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }, []);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -31,6 +58,8 @@ const Courses = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  console.log(courses);
 
   return (
     <Box
@@ -84,15 +113,9 @@ const Courses = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              <CourseTableRow
-                course={{
-                  faculty: "BM",
-                  courseCode: "BLM-2001",
-                  courseName: "Algorithm 2",
-                  year: "2024",
-                  semester: "Spring",
-                }}
-              />
+              {courses.map((course) => (
+                <CourseTableRow course={course} />
+              ))}
             </TableBody>
           </Table>
         </TableContainer>

@@ -58,7 +58,9 @@ const StyledMenu = styled((props) => (
 }));
 
 const CourseTableRow = ({ course }) => {
-  const { faculty, courseName, courseCode, semester, year } = course;
+  console.log(course);
+  const { faculty, courseName, courseCode, courseSemester, schoolYear } =
+    course;
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -75,7 +77,7 @@ const CourseTableRow = ({ course }) => {
           width: "20%",
         }}
       >
-        {faculty}
+        {faculty ? faculty : "BM"}
       </TableCell>
       <TableCell>{courseCode}</TableCell>
       <TableCell
@@ -85,8 +87,8 @@ const CourseTableRow = ({ course }) => {
       >
         {courseName}
       </TableCell>
-      <TableCell>{year}</TableCell>
-      <TableCell>{semester}</TableCell>
+      <TableCell>{schoolYear}</TableCell>
+      <TableCell>{courseSemester}</TableCell>
       <TableCell align="center">
         <Button onClick={handleClick} variant="outlined">
           Details

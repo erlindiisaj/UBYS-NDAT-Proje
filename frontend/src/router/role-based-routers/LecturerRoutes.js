@@ -1,8 +1,7 @@
 import EditProfile from "pages/edit-profile/EditProfile";
 import MainScreenCategories from "pages/MainScreenCategories";
-import ProfessorCalendar from "pages/professor/calendar/ProfessorCalendar";
-import ProfessorsStudents from "pages/professor/myStudents/ProfessorsStudents";
-import ProfessorSubjects from "pages/professor/subjects/ProfessorSubjects";
+import Courses from "pages/lecturer/my-courses/Courses";
+import DetailsPage from "pages/lecturer/my-courses/detail-page/DetailsPage";
 
 const LecturerRoutes = [
   {
@@ -14,22 +13,21 @@ const LecturerRoutes = [
     element: <EditProfile />,
   },
   {
-    path: "mycourses",
-    element: <ProfessorSubjects />,
+    path: "my-courses",
+    element: <Courses />,
   },
   {
-    path:"mystudents",
-    element:<ProfessorsStudents/>
+    path: "my-courses/details/:courseCode",
+    element: <DetailsPage />,
   },
   {
-    path:"mycalendar",
-    element:<ProfessorCalendar/>
+    path: "my-courses/exams/:courseCode",
+    element: <DetailsPage />,
   },
   {
-    path: "mystudents",
-    element: <ProfessorsStudents />,
+    path: "my-courses/list/:courseCode",
+    element: <DetailsPage />,
   },
-
 ];
 
 export default LecturerRoutes;

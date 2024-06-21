@@ -7,15 +7,15 @@ import CalendarIcon from "assets/calendar-icon";
 import DerslerimIcon from "assets/derslerim-icon";
 
 const STUDENT_PAGES = [
-  { title: "Derslerim", link: "derslerim", icon: <DerslerimIcon /> },
-  { title: "Takvim", link: "takvim", icon: <CalendarIcon /> },
-  { title: "Ders Seçimi", link: "ders-secimi", icon: <DerslerimIcon /> },
-  { title: "Belge Talebi", link: "belgetalebi", icon: <BelgeIcon /> },
+  { title: "Subjects", link: "derslerim", icon: <DerslerimIcon /> },
+  { title: "Calendar", link: "takvim", icon: <CalendarIcon /> },
+  { title: "Course Selection", link: "ders-secimi", icon: <DerslerimIcon /> },
+  { title: "Documents", link: "belgetalebi", icon: <BelgeIcon /> },
 ];
 
 const ADVISOR_PAGES = [
   {
-    title: "Danışmanı Olduğum Öğrenciler",
+    title: "Students I Advise",
     link: "advisor-students",
     icon: <StudentIcon />,
   },
@@ -23,17 +23,14 @@ const ADVISOR_PAGES = [
 
 const ADMINISTRATOR_PAGES = [
   {
-    title: "Öğretim Elemanları",
+    title: "Lecturers",
     link: "lecturers",
     icon: <ListIcon />,
   },
 ];
 
-//!~ --------------------- This Needs to be updated --------------------- ~!//
 const PROFESSOR_PAGES = [
-  { title: "My Courses", link: "mycourses", icon: <DerslerimIcon /> },
-  { title: "My Calendar", link: "mycalendar", icon: <CalendarIcon /> },
-  { title: "My Students", link: "mystudents", icon: <DerslerimIcon /> },
+  { title: "Courses", link: "my-courses", icon: <DerslerimIcon /> },
 ];
 
 const Pages = (role) => {

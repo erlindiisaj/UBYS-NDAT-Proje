@@ -2,13 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SubjectsTableRow from "../components/SubjectsTableRow";
-import {
-  getFaculties,
-  //getDepartments,
-  getSubjects,
-  filteredSubjects,
-  getDepartmentsByFaculty,
-} from "pages/administrator/sample-data";
 
 import { useTheme } from "@mui/material/styles";
 import {
@@ -52,9 +45,9 @@ import { selectUserToken } from "store/user/user.selector";
 const LecturerSubjectRegistration = () => {
   const theme = useTheme();
   const params = useParams();
-  const SUBJECTS = getSubjects();
+  //const SUBJECTS = getSubjects();
   const dispatch = useDispatch();
-  const FACULTIES = getFaculties();
+  //const FACULTIES = getFaculties();
   //const DEPARTMENTS = getDepartments();
   //const fetchedSubjects = useSelector(selectFetchedSubjects);
   const token = useSelector(selectUserToken);
@@ -114,7 +107,7 @@ const LecturerSubjectRegistration = () => {
       case "faculty":
         setFaulty(value);
         setChanged(true);
-        setDepartments(getDepartmentsByFaculty(value));
+        setDepartments(value ? value : "BM");
         break;
       case "department":
         setDepartment(value);
@@ -126,7 +119,8 @@ const LecturerSubjectRegistration = () => {
   };
 
   const handleFilter = () => {
-    setSubjects(filteredSubjects(faculty, department));
+    //setSubjects(filteredSubjects(faculty, department));
+    console.log("Filtering");
     setChanged(false);
   };
 
@@ -138,7 +132,7 @@ const LecturerSubjectRegistration = () => {
   const handleClear = () => {
     setFaulty("");
     setDepartment("");
-    setSubjects(SUBJECTS);
+    setSubjects(subjects);
   };
 
   const handleClickOpen = () => {
@@ -261,11 +255,7 @@ const LecturerSubjectRegistration = () => {
               label="Faculty"
               onChange={handleChange}
             >
-              {FACULTIES.map((faculty, index) => (
-                <MenuItem key={index} value={faculty}>
-                  {faculty}
-                </MenuItem>
-              ))}
+              <MenuItem value={"BM"}>BM</MenuItem>
             </Select>
           </FormControl>
           <FormControl size="small" fullWidth>

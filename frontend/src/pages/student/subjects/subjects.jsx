@@ -7,7 +7,6 @@ import { Box, Button, CircularProgress } from "@mui/material";
 import { useSelector } from "react-redux";
 import { selectProgram } from "store/program/program.selector";
 
-import { getToken } from "utils/helper-functions";
 import SubjectsTable from "./SubjectsTable";
 import { selectUserToken } from "store/user/user.selector";
 
@@ -82,7 +81,7 @@ const Subjects = () => {
         </Box>
       ) : (
         <>
-          {Object.keys(result).map((year, index) => {
+          {Object.keys(result)?.map((year, index) => {
             const subjectsForYear = result[year];
             if (index === 0 || open) {
               return (
@@ -90,17 +89,17 @@ const Subjects = () => {
                   <SubjectsTable
                     key={`${year}-2`}
                     subjects={subjectsForYear.secondSemester}
-                    semester={{
-                      yil: year,
-                      donem: "Bahar",
+                    getSemester={{
+                      year: year,
+                      semester: "Spring",
                     }}
                   />
                   <SubjectsTable
                     key={`${year}-1`}
                     subjects={subjectsForYear.firstSemester}
-                    semester={{
-                      yil: year,
-                      donem: "Güz",
+                    getSemester={{
+                      year: year,
+                      semester: "Fall",
                     }}
                   />
                 </>
@@ -123,8 +122,8 @@ const Subjects = () => {
             >
               {" "}
               {open
-                ? "Geçmiş Yıl Derslerini Gizle"
-                : "Geçmiş Yıl Derslerini Göster"}
+                ? "Hide Previous Year Subjects"
+                : "Show Previous Year Subjects"}
             </Button>
           </Box>
         </>

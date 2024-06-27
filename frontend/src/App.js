@@ -20,6 +20,7 @@ const App = () => {
       dispatch(setUserToken(token));
       dispatch(setUserData(user));
       dispatch(setProgram(program));
+
       const fetchUserData = async () => {
         try {
           const response = await axios.get(

@@ -12,7 +12,7 @@ export const selectedSubjectsAkts = (state) =>
 
 export const selectCourseCodes = (state) => {
   const list = [];
-  state.selectedSubjects.selectedSubjects.map((subject) => {
+  state.selectedSubjects.selectedSubjects?.map((subject) => {
     list.push(subject.courseCode);
   });
   return list;

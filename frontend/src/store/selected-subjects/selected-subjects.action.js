@@ -1,4 +1,4 @@
-import { DERS_SECIMI_ACTIONS } from "./ders-secimi.types";
+import { SELECTED_SUBJECTS_ACTIONS } from "./selected-subjects.types";
 import { createAction } from "../../reducer";
 
 const addSubject = (subjectsSelected, subjectToAdd) => {
@@ -29,7 +29,7 @@ export const removeSubjectFromStore = (subjectsSelected, subjectToRemove) => {
 };
 
 export const setSelectedSubjects = (newCartItems) =>
-  createAction(DERS_SECIMI_ACTIONS.SET_SELECTED_SUBJECTS, newCartItems);
+  createAction(SELECTED_SUBJECTS_ACTIONS.SET_SELECTED_SUBJECTS, newCartItems);
 
 export const setFetchedSubjects = (fetchedSubjects) =>
-  createAction(DERS_SECIMI_ACTIONS.SET_FETCHED_SUBJECTS, fetchedSubjects);
+  createAction(SELECTED_SUBJECTS_ACTIONS.SET_FETCHED_SUBJECTS, fetchedSubjects);

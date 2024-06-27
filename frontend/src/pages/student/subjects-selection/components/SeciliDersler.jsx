@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { Box, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-import { selectedSubjectsAkts } from "store/ders-secimi/ders-secimi.selector";
-import { selectSelectedSubjects } from "store/ders-secimi/ders-secimi.selector";
+import { selectedSubjectsAkts } from "store/selected-subjects/selected-subjects.selector";
+import { selectSelectedSubjects } from "store/selected-subjects/selected-subjects.selector";
 
 import SecilmisDers from "./SecilmisDers";
 

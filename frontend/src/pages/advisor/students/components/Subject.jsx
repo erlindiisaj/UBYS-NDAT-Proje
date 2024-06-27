@@ -7,11 +7,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import { Box, Typography, Button } from "@mui/material";
 
-import { addSubjectToStore } from "store/ders-secimi/ders-secimi.action";
+import { addSubjectToStore } from "store/selected-subjects/selected-subjects.action";
 import {
   selectSelectedSubjects,
   selectedSubjectsAkts,
-} from "store/ders-secimi/ders-secimi.selector";
+} from "store/selected-subjects/selected-subjects.selector";
 
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";

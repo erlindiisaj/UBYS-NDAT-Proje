@@ -1,10 +1,10 @@
 import { Box, Typography, Avatar } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import moment from "moment";
-const GenelBilgilerTablo = ({ data }) => {
+const GeneralInfoTable = ({ data }) => {
   const theme = useTheme();
   console.log(data);
-  const { LecturerName, state, grade, examResultDtos } = data;
+  const { lecturerName, state, grade, examResultDtos } = data;
 
   return (
     <Box
@@ -26,14 +26,8 @@ const GenelBilgilerTablo = ({ data }) => {
           justifyContent: "space-between",
         }}
       >
-        <Typography variant="subtitle2">{`Ders Adı: Math`}</Typography>
-        <Typography variant="subtitle2">{`Durum: ${
-          state
-            ? state === "Passed"
-              ? "Başarılı"
-              : "Başarısız"
-            : "Durumu Netleşmemiş"
-        }`}</Typography>
+        <Typography variant="subtitle2">{`Course Name: Math (Hard Coded)`}</Typography>
+        <Typography variant="subtitle2">{`State: ${state}`}</Typography>
       </Box>
       <Box
         sx={{
@@ -47,16 +41,16 @@ const GenelBilgilerTablo = ({ data }) => {
         }}
       >
         <Typography textAlign="center" variant="caption">
-          Sınav Tipi
+          Exam Type
         </Typography>
         <Typography textAlign="center" variant="caption">
-          Sınav Adı
+          Exam Name
         </Typography>
         <Typography textAlign="center" variant="caption">
-          İlan Tarihi
+          Announcement Date
         </Typography>
         <Typography textAlign="center" variant="caption">
-          Sınav Notu
+          Points
         </Typography>
       </Box>
       <Box
@@ -74,7 +68,7 @@ const GenelBilgilerTablo = ({ data }) => {
             flexDirection: "column",
           }}
         >
-          {examResultDtos.map((exam, index) => (
+          {examResultDtos?.map((exam, index) => (
             <Box
               key={index}
               sx={{
@@ -86,18 +80,10 @@ const GenelBilgilerTablo = ({ data }) => {
               }}
             >
               <Typography textAlign="center" variant="caption">
-                {exam.examName === "Mid Term"
-                  ? "Ara Sınav"
-                  : exam.examName === "Final"
-                  ? "Final Sınavı"
-                  : "Bütünleme Sınavı"}
+                {exam.examName}
               </Typography>
               <Typography textAlign="center" variant="caption">
-                {exam.examName === "Mid Term"
-                  ? "Vize"
-                  : exam.examName === "Final"
-                  ? "Final"
-                  : "Bütünleme"}
+                {exam.examName}
               </Typography>
               <Typography textAlign="center" variant="caption">
                 {moment(exam.announcmentDate).format("YYYY-MM-DD, h:mm")}
@@ -132,7 +118,7 @@ const GenelBilgilerTablo = ({ data }) => {
             }}
             variant="caption"
           >
-            Dersi Veren: John Doe
+            {"Lecturer: " + lecturerName}
           </Typography>
         </Box>
         <Box pr={3}>
@@ -148,7 +134,7 @@ const GenelBilgilerTablo = ({ data }) => {
                 marginRight: 1,
               }}
             >
-              Final Sonunda Oluşan Sınıf Ağırlıklı Not Ortalaması:{" "}
+              Class average grade point at the end of the Finals:{" "}
             </Typography>
             <Typography>-</Typography>
           </Box>
@@ -164,7 +150,7 @@ const GenelBilgilerTablo = ({ data }) => {
                 marginRight: 1,
               }}
             >
-              Bütünleme Sonunda Oluşan Sınıf Ağırlıklı Not Ortalaması:{" "}
+              Class average grade point at the end of the Complements:{" "}
             </Typography>
             <Typography>-</Typography>
           </Box>
@@ -173,4 +159,4 @@ const GenelBilgilerTablo = ({ data }) => {
     </Box>
   );
 };
-export default GenelBilgilerTablo;
+export default GeneralInfoTable;

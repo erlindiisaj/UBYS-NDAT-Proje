@@ -20,11 +20,11 @@ import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import {
   selectSelectedSubjects,
   selectFetchedSubjects,
-} from "store/ders-secimi/ders-secimi.selector";
+} from "store/selected-subjects/selected-subjects.selector";
 import {
   setFetchedSubjects,
   setSelectedSubjects,
-} from "store/ders-secimi/ders-secimi.action";
+} from "store/selected-subjects/selected-subjects.action";
 
 import { isEqual } from "lodash";
 

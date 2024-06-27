@@ -4,9 +4,9 @@ import { Box, Typography } from "@mui/material";
 import TableRow from "components/TableRow";
 import TableHeader from "components/TableHeader";
 
-const SubjectsTable = ({ subjects, semester }) => {
+const SubjectsTable = ({ subjects, getSemester }) => {
   const theme = useTheme();
-  const { yil, donem } = semester;
+  const { year, semester } = getSemester;
   return (
     <Box
       sx={{
@@ -26,7 +26,7 @@ const SubjectsTable = ({ subjects, semester }) => {
           marginX: "35px",
         }}
       >
-        <Typography variant="subtitle1">{yil + " - " + donem}</Typography>
+        <Typography variant="subtitle1">{year + " - " + semester}</Typography>
       </Box>
       <Box
         sx={{
@@ -37,16 +37,16 @@ const SubjectsTable = ({ subjects, semester }) => {
           borderRight: "1px solid #B3B3B3",
         }}
       >
-        <TableHeader left={false} right={true} title="Ders Kodu" />
-        <TableHeader left={false} right={false} title="Ders Adı" />
-        <TableHeader left={true} right={true} title="Kredi" />
+        <TableHeader left={false} right={true} title="Course Code" />
+        <TableHeader left={false} right={false} title="Name" />
+        <TableHeader left={true} right={true} title="Credits" />
         <TableHeader left={false} right={true} title="AKTS" />
-        <TableHeader left={false} right={true} title="Devam Durumu" />
-        <TableHeader left={false} right={false} title="Geçme Notu" />
-        <TableHeader left={true} right={true} title="HBN" />
-        <TableHeader left={false} right={false} title="Başarı Durumu" />
+        <TableHeader left={false} right={true} title="Attendance Status" />
+        <TableHeader left={false} right={false} title="Pass Grade" />
+        <TableHeader left={true} right={true} title="LPG" />
+        <TableHeader left={false} right={false} title="Standing" />
       </Box>
-      {subjects.map((subject, index) => (
+      {subjects?.map((subject, index) => (
         <TableRow key={index} data={subject} />
       ))}
     </Box>

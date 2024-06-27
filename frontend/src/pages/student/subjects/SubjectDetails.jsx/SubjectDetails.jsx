@@ -4,10 +4,10 @@ import { useParams } from "react-router-dom";
 import { Box, Tabs, Tab } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-import Odevler from "./tab-components/Odevler";
+import Assignments from "./tab-components/Assignments";
 import CustomTabPanel from "components/CustomTabPanel";
-import GenelBilgiler from "./tab-components/GenelBilgiler";
-import HaftaIcerikleri from "./tab-components/HaftaIcerikleri";
+import GeneralInformation from "./tab-components/GeneralInformation";
+import WeekContents from "./tab-components/WeekContents";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { selectUserToken } from "store/user/user.selector";
@@ -92,19 +92,19 @@ const SubjectDetails = () => {
             <Tab
               data-variant="settings"
               iconPosition="start"
-              label="Genel Bilgiler"
+              label="General Information"
               {...a11yProps(0)}
             />
             <Tab
               data-variant="settings"
               iconPosition="start"
-              label="Hafta İçerikleri"
+              label="Week Contents"
               {...a11yProps(1)}
             />{" "}
             <Tab
               data-variant="settings"
               iconPosition="start"
-              label="Ödevler"
+              label="Assignments"
               {...a11yProps(1)}
             />
           </Tabs>
@@ -115,13 +115,13 @@ const SubjectDetails = () => {
           }}
         >
           <CustomTabPanel value={value} index={0}>
-            <GenelBilgiler details={courseDetails} />
+            <GeneralInformation details={courseDetails} />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={1}>
-            <HaftaIcerikleri details={courseDetails} />
+            <WeekContents details={courseDetails} />
           </CustomTabPanel>{" "}
           <CustomTabPanel value={value} index={2}>
-            <Odevler />
+            <Assignments />
           </CustomTabPanel>
         </Box>
       </Box>

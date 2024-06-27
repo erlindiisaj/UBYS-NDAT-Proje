@@ -5,9 +5,9 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { selectUserToken } from "store/user/user.selector";
 import { Box } from "@mui/material";
-import GenelBilgilerTablo from "./components/genelBilgilerTablo";
+import GeneralInfoTable from "./components/GeneralInfoTable";
 
-const GenelBilgiler = () => {
+const GeneralInformation = () => {
   const token = useSelector(selectUserToken);
   const params = useParams();
   const theme = useTheme();
@@ -40,9 +40,9 @@ const GenelBilgiler = () => {
   return (
     <Box>
       {data.map((item, index) => {
-        return <GenelBilgilerTablo key={index} data={item} />;
+        return <GeneralInfoTable key={index} data={item} />;
       })}
     </Box>
   );
 };
-export default GenelBilgiler;
+export default GeneralInformation;

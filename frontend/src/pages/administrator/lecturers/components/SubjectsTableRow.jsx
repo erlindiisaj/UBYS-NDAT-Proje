@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { Button, TableCell, TableRow } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addSubjectToStore } from "store/ders-secimi/ders-secimi.action";
-import { selectSelectedSubjects } from "store/ders-secimi/ders-secimi.selector";
+import { addSubjectToStore } from "store/selected-subjects/selected-subjects.action";
+import { selectSelectedSubjects } from "store/selected-subjects/selected-subjects.selector";
 
 const SubjectsTableRow = ({ subject, toControl }) => {
   const {

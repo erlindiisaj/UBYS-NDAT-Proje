@@ -10,7 +10,7 @@ import SeciliDersler from "./components/SeciliDersler";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUserToken } from "store/user/user.selector";
 import { selectProgram } from "store/program/program.selector";
-import { setSelectedSubjects } from "store/ders-secimi/ders-secimi.action";
+import { setSelectedSubjects } from "store/selected-subjects/selected-subjects.action";
 const SubjectsSelection = () => {
   const token = useSelector(selectUserToken);
   const department = useSelector(selectProgram);

@@ -29,7 +29,7 @@ import avatar1 from "assets/avatar1.png";
 import {
   setFetchedSubjects,
   setSelectedSubjects,
-} from "store/ders-secimi/ders-secimi.action";
+} from "store/selected-subjects/selected-subjects.action";
 
 const TabPanel = ({ children, value, index, ...other }) => {
   return (

@@ -12,11 +12,11 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 
-import { addSubjectToStore } from "store/ders-secimi/ders-secimi.action";
+import { addSubjectToStore } from "store/selected-subjects/selected-subjects.action";
 import {
   selectSelectedSubjects,
   selectedSubjectsAkts,
-} from "store/ders-secimi/ders-secimi.selector";
+} from "store/selected-subjects/selected-subjects.selector";
 
 const Ders = ({ data, state }) => {
   const { courseCode, courseName, akts, lecturerName, courseType } = data;

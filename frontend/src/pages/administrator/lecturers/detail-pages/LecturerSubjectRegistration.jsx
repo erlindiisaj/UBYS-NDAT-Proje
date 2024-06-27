@@ -34,12 +34,12 @@ import {
   //setSelectedSubjects,
   removeSubjectFromStore,
   setSelectedSubjects,
-} from "store/ders-secimi/ders-secimi.action";
+} from "store/selected-subjects/selected-subjects.action";
 import {
   selectCourseCodes,
   //selectFetchedSubjects,
   selectSelectedSubjects,
-} from "store/ders-secimi/ders-secimi.selector";
+} from "store/selected-subjects/selected-subjects.selector";
 import { selectUserToken } from "store/user/user.selector";
 
 const LecturerSubjectRegistration = () => {
@@ -91,7 +91,7 @@ const LecturerSubjectRegistration = () => {
       .then((res) => {
         let codes = [];
         dispatch(setSelectedSubjects(res.data));
-        res.data.map((data) => {
+        res.data?.map((data) => {
           codes.push(data.courseCode);
         });
         setFetchedCodes(codes);
@@ -268,7 +268,7 @@ const LecturerSubjectRegistration = () => {
               label="Department"
               onChange={handleChange}
             >
-              {departments.map((department, index) => (
+              {departments?.map((department, index) => (
                 <MenuItem key={index} value={department}>
                   {department}
                 </MenuItem>
@@ -329,7 +329,7 @@ const LecturerSubjectRegistration = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {subjects.map((subject, index) => (
+                {subjects?.map((subject, index) => (
                   <SubjectsTableRow
                     key={index}
                     toControl={subjects}
@@ -382,7 +382,7 @@ const LecturerSubjectRegistration = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {selectedSubjects.map((subject, index) => (
+              {selectedSubjects?.map((subject, index) => (
                 <TableRow
                   sx={{
                     backgroundColor: theme.palette.success.lighter,

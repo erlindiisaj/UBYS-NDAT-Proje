@@ -8,6 +8,7 @@ import {
 } from "utils/helper-functions";
 
 const TableRow = ({ data }) => {
+  console.log(data);
   const {
     courseName,
     complement,
@@ -16,6 +17,7 @@ const TableRow = ({ data }) => {
     midTerm,
     attendanceFulfilled,
     id,
+    state,
   } = data;
 
   const points = calculateSubjectsPoint(midTerm, final);
@@ -107,7 +109,7 @@ const TableRow = ({ data }) => {
           }}
         >
           <Typography variant="body2">
-            {attendanceFulfilled ? "Devamlı" : "Devamsız"}
+            {attendanceFulfilled ? "Fulfilled" : "Unfulfilled"}
           </Typography>
         </Box>
         <Box
@@ -147,13 +149,7 @@ const TableRow = ({ data }) => {
             borderBottom: "1px solid #B3B3B3",
           }}
         >
-          <Typography variant="body2">
-            {points >= 60
-              ? "Başarılı"
-              : points >= 50
-              ? "Koşulu Başarılı"
-              : "Başarısız"}
-          </Typography>
+          <Typography variant="body2">{state}</Typography>
         </Box>
         <Box
           sx={{
@@ -173,7 +169,7 @@ const TableRow = ({ data }) => {
               marginRight: "10px",
             }}
           >
-            <Typography variant="subtitle2">Vize:</Typography>
+            <Typography variant="subtitle2">Mid Term:</Typography>
           </Box>
           <Box
             sx={{
@@ -229,7 +225,7 @@ const TableRow = ({ data }) => {
               marginRight: "10px",
             }}
           >
-            <Typography variant="subtitle2">Bütünleme:</Typography>
+            <Typography variant="subtitle2">Complement:</Typography>
           </Box>
           <Box
             sx={{

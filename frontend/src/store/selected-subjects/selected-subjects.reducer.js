@@ -1,4 +1,4 @@
-import { DERS_SECIMI_ACTIONS } from "./ders-secimi.types";
+import { SELECTED_SUBJECTS_ACTIONS } from "./selected-subjects.types";
 
 const INITIAL_STATE = {
   selectedSubjects: [],
@@ -8,9 +8,9 @@ const INITIAL_STATE = {
 export const selectedSubjectsReducer = (state = INITIAL_STATE, action) => {
   const { payload, type } = action;
   switch (type) {
-    case DERS_SECIMI_ACTIONS.SET_SELECTED_SUBJECTS:
+    case SELECTED_SUBJECTS_ACTIONS.SET_SELECTED_SUBJECTS:
       return { ...state, selectedSubjects: payload };
-    case DERS_SECIMI_ACTIONS.SET_FETCHED_SUBJECTS:
+    case SELECTED_SUBJECTS_ACTIONS.SET_FETCHED_SUBJECTS:
       return { ...state, fetchedSubjects: payload };
     default:
       return state;

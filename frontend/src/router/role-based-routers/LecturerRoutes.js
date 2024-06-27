@@ -2,6 +2,7 @@ import EditProfile from "pages/edit-profile/EditProfile";
 import MainScreenCategories from "pages/MainScreenCategories";
 import Courses from "pages/lecturer/my-courses/Courses";
 import DetailsPage from "pages/lecturer/my-courses/detail-page/DetailsPage";
+import ParticlesCSS from "components/particles";
 
 const LecturerRoutes = [
   {
@@ -22,7 +23,7 @@ const LecturerRoutes = [
   },
   {
     path: "my-courses/exams/:courseCode",
-    element: <DetailsPage />,
+    element: <ParticlesCSS />,
   },
   {
     path: "my-courses/list/:courseCode",

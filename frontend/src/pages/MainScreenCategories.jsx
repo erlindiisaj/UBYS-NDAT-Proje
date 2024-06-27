@@ -2,7 +2,7 @@ import React from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Box } from "@mui/material";
 
 import LinkCard from "components/link-card";
 import UserCardSm from "components/UserCardSm";
@@ -13,6 +13,8 @@ import { ROLE_TYPES } from "utils/constants";
 import { selectUserData } from "store/user/user.selector";
 import { selectProgram } from "store/program/program.selector";
 import { setProgram } from "store/program/program.action";
+
+import ParticlesCSS from "components/particles";
 
 export default function MainScreenCategories() {
   const dispatch = useDispatch();
@@ -47,6 +49,15 @@ export default function MainScreenCategories() {
         marginTop: "50px",
       }}
     >
+      <Box
+        sx={{
+          height: "100%",
+          width: "100%",
+          zIndex: "-1",
+        }}
+      >
+        <ParticlesCSS />
+      </Box>
       <UserCardSm
         shadowAvailable={true}
         ppSize={"md"}

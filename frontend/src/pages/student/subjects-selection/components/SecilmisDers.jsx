@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Box, IconButton, Typography } from "@mui/material";
 import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 
-import { removeSubjectFromStore } from "store/ders-secimi/ders-secimi.action";
-import { selectSelectedSubjects } from "store/ders-secimi/ders-secimi.selector";
+import { removeSubjectFromStore } from "store/selected-subjects/selected-subjects.action";
+import { selectSelectedSubjects } from "store/selected-subjects/selected-subjects.selector";
 
 const SecilmisDers = ({ data, index }) => {
   const { courseCode, courseName, akts, type } = data;

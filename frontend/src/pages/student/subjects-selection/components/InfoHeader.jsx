@@ -4,7 +4,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { selectUserToken } from "store/user/user.selector";
 import { selectProgram } from "store/program/program.selector";
-import { selectSelectedSubjects } from "store/ders-secimi/ders-secimi.selector";
+import { selectSelectedSubjects } from "store/selected-subjects/selected-subjects.selector";
 
 const InfoHeader = ({ details }) => {
   //const { currentSemester, currentSchoolYear } = details;

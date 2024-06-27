@@ -5,12 +5,13 @@ import axios from "axios";
 import { Box } from "@mui/material";
 
 import InfoHeader from "./components/InfoHeader";
-import SecDersler from "./components/Secdersler";
-import SeciliDersler from "./components/SeciliDersler";
+import SelectCourses from "./components/SelectCourses";
+import HighlightedCourses from "./components/HighlightedCourses";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUserToken } from "store/user/user.selector";
 import { selectProgram } from "store/program/program.selector";
 import { setSelectedSubjects } from "store/selected-subjects/selected-subjects.action";
+
 const SubjectsSelection = () => {
   const token = useSelector(selectUserToken);
   const department = useSelector(selectProgram);
@@ -77,8 +78,8 @@ const SubjectsSelection = () => {
         display="flex"
         sx={{ justifyContent: "center", alignItems: "flex-start" }}
       >
-        <SeciliDersler />
-        <SecDersler data={data} />
+        <HighlightedCourses />
+        <SelectCourses data={data} />
       </Box>
     </Box>
   );

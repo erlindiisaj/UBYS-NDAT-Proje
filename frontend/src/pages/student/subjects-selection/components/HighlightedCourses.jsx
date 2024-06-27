@@ -6,9 +6,9 @@ import { useTheme } from "@mui/material/styles";
 import { selectedSubjectsAkts } from "store/selected-subjects/selected-subjects.selector";
 import { selectSelectedSubjects } from "store/selected-subjects/selected-subjects.selector";
 
-import SecilmisDers from "./SecilmisDers";
+import SecilmisDers from "./SelectedCourses";
 
-const SeciliDersler = () => {
+const HighlightedCourses = () => {
   const selectedAkts = useSelector(selectedSubjectsAkts);
   const selectedSubjects = useSelector(selectSelectedSubjects);
 
@@ -172,4 +172,4 @@ const SeciliDersler = () => {
   );
 };
 
-export default SeciliDersler;
+export default HighlightedCourses;

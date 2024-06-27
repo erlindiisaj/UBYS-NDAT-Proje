@@ -1,4 +1,4 @@
-import Ders from "../Ders";
+import Ders from "../Course";
 import { Data } from "data";
 
 import { Box, Typography } from "@mui/material";
@@ -6,7 +6,8 @@ import { useTheme } from "@mui/material/styles";
 
 import SelectSubjectsTableHeader from "components/SelectSubjectsTableHeader";
 
-const ProgramDisiDersler = ({ courses }) => {
+const OptionalCourses = ({ courses }) => {
+  console.log("courses", courses);
   const theme = useTheme();
   return (
     <Box
@@ -19,7 +20,6 @@ const ProgramDisiDersler = ({ courses }) => {
     >
       <Box
         sx={{
-          minWidth: "95%",
           marginY: "20px",
           height: "auto",
           maxWidth: "95%",
@@ -36,9 +36,9 @@ const ProgramDisiDersler = ({ courses }) => {
           variant="caption2"
           color="info.darker"
         >
-          Burada da bölümünüzün kayıtabileceğiniz dersler bulunmaktadır. Kendi
-          biriminizde açılmayan dersler başka birimde açılabilir. Öğrenci
-          işlerine danışmadan dış birimden ders almayınız.
+          Your optional courses are included in the elective courses tab. It is
+          not mandatory for graduation, but you must take elective courses to
+          complete the credits required for graduation.
         </Typography>
       </Box>
       <SelectSubjectsTableHeader />
@@ -50,8 +50,10 @@ const ProgramDisiDersler = ({ courses }) => {
           flexDirection: "column",
         }}
       >
-        {courses ? (
-          courses.map((item) => <Ders data={item} />)
+        {courses.length !== 0 ? (
+          courses.map((item, index) => (
+            <Ders state="success" key={index} data={item} />
+          ))
         ) : (
           <Typography
             padding={3}
@@ -59,7 +61,7 @@ const ProgramDisiDersler = ({ courses }) => {
             textAlign="center"
             variant="subtitle2"
           >
-            Ders bulunamadı.
+            No courses found!
           </Typography>
         )}
       </Box>
@@ -67,4 +69,4 @@ const ProgramDisiDersler = ({ courses }) => {
   );
 };
 
-export default ProgramDisiDersler;
+export default OptionalCourses;

@@ -18,7 +18,7 @@ import {
   selectedSubjectsAkts,
 } from "store/selected-subjects/selected-subjects.selector";
 
-const Ders = ({ data, state }) => {
+const Course = ({ data, state }) => {
   const { courseCode, courseName, akts, lecturerName, courseType } = data;
 
   const theme = useTheme();
@@ -42,7 +42,7 @@ const Ders = ({ data, state }) => {
   const handleAdd = (e) => {
     e.preventDefault();
     if (selectedAkts + akts > 45) {
-      toast.error("35 AKTS'den fazla ders seçemezsiniz!");
+      toast.error("You can not select more than 45 AKTS!");
       return;
     } else
       dispatch(addSubjectToStore(selectedSubjects, { ...data, type: state }));
@@ -87,7 +87,7 @@ const Ders = ({ data, state }) => {
               variant="contained"
               color="success"
             >
-              +&nbsp;Seç
+              +&nbsp;Add
             </Button>
           ) : (
             ""
@@ -157,7 +157,7 @@ const Ders = ({ data, state }) => {
             alignItems: "center",
           }}
         >
-          <Typography variant="subtitle2">Alabilir</Typography>
+          <Typography variant="subtitle2">Selectable</Typography>
         </Box>
       </Box>
       <ToastContainer />
@@ -165,4 +165,4 @@ const Ders = ({ data, state }) => {
   );
 };
 
-export default Ders;
+export default Course;

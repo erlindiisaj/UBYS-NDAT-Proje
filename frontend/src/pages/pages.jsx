@@ -7,10 +7,14 @@ import CalendarIcon from "assets/calendar-icon";
 import DerslerimIcon from "assets/derslerim-icon";
 
 const STUDENT_PAGES = [
-  { title: "Subjects", link: "derslerim", icon: <DerslerimIcon /> },
-  { title: "Calendar", link: "takvim", icon: <CalendarIcon /> },
-  { title: "Course Selection", link: "ders-secimi", icon: <DerslerimIcon /> },
-  { title: "Documents", link: "belgetalebi", icon: <BelgeIcon /> },
+  { title: "Subjects", link: "my-courses", icon: <DerslerimIcon /> },
+  { title: "Calendar", link: "calendar", icon: <CalendarIcon /> },
+  {
+    title: "Course Selection",
+    link: "course-selection",
+    icon: <DerslerimIcon />,
+  },
+  { title: "Documents", link: "document-request", icon: <BelgeIcon /> },
 ];
 
 const ADVISOR_PAGES = [

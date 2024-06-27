@@ -5,15 +5,14 @@ import { Box, Tabs, Tab } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import CustomTabPanel from "components/CustomTabPanel";
+import Explanation from "./tab-components/Explanation";
+import OptionalCourses from "./tab-components/OptionalCourses";
+import MandatoryCourses from "./tab-components/MandatoryCourses";
+import UpperTermCourses from "./tab-components/UpperTermCourses";
+import ExtracurricularCourses from "./tab-components/ExtracurricularCourses";
+import SucceededCourses from "./tab-components/SucceededCourses";
 
-import Aciklama from "./tab-components/Aciklama";
-import SecmeliDersler from "./tab-components/SecmeliDersler";
-import ZorunluDersler from "./tab-components/ZorunluDersler";
-import UstDonemDersler from "./tab-components/UstDonemDersler";
-import ProgramDisiDersler from "./tab-components/ProgramDisiDersler";
-import BasariliOnunanDersler from "./tab-components/BasariliOnunanDersler";
-
-const SecDersler = ({ data }) => {
+const SelectCourses = ({ data }) => {
   const theme = useTheme();
   const [value, setValue] = useState(0);
 
@@ -72,36 +71,36 @@ const SecDersler = ({ data }) => {
           value={value}
           onChange={handleChange}
         >
-          <Tab label="Açıklama" />
-          <Tab label="Zorunlu Dersler" />
-          <Tab label="Üst Dönem Dersler" />
-          <Tab label="Başarılı Olunan Dersler" />
-          <Tab label="Seçmeli Dersler" />
-          <Tab label="Program Dışı Dersler" />
+          <Tab label="Explanation" />
+          <Tab label="Mandatory Courses" />
+          <Tab label="Upper Term Courses" />
+          <Tab label="Succeeded Courses" />
+          <Tab label="Optional Courses" />
+          <Tab label="Extracurricular Courses" />
         </Tabs>
         <CustomTabPanel value={value} index={0}>
-          <Aciklama />
+          <Explanation />
         </CustomTabPanel>{" "}
         <CustomTabPanel value={value} index={1}>
-          <ZorunluDersler
+          <MandatoryCourses
             courses={{ required: requiredCourses, failed: failedCourses }}
           />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          <UstDonemDersler courses={overHeadCourses} />
+          <UpperTermCourses courses={overHeadCourses} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={3}>
-          <BasariliOnunanDersler courses={passedCourses} />
+          <SucceededCourses courses={passedCourses} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={4}>
-          <SecmeliDersler courses={optionalCourses} />
+          <OptionalCourses courses={optionalCourses} />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={5}>
-          <ProgramDisiDersler />
+          <ExtracurricularCourses />
         </CustomTabPanel>
       </Box>
     </Box>
   );
 };
 
-export default SecDersler;
+export default SelectCourses;

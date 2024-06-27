@@ -15,15 +15,15 @@ const StudentRoutes = [
     element: <MainScreenCategories />,
   },
   {
-    path: "derslerim",
+    path: "my-courses",
     element: <Subjects />,
   },
   {
-    path: "derslerim/:courseCode/:id",
+    path: "my-courses/:courseCode/:id",
     element: <SubjectDetails />,
   },
   {
-    path: "ders-secimi",
+    path: "course-selection",
     element: <SubjectsSelection />,
   },
   {
@@ -31,11 +31,11 @@ const StudentRoutes = [
     element: <EditProfile />,
   },
   {
-    path: "takvim",
+    path: "calendar",
     element: <Calendar />,
   },
   {
-    path: "belgetalebi",
+    path: "document-request",
     element: <BelgeTablebi />,
   },
 ];

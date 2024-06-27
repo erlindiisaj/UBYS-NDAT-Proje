@@ -1,4 +1,4 @@
-import Ders from "../Ders";
+import Ders from "../Course";
 import { Data } from "data";
 
 import { useTheme } from "@mui/material/styles";
@@ -6,7 +6,7 @@ import { Box, Typography } from "@mui/material";
 
 import SelectSubjectsTableHeader from "components/SelectSubjectsTableHeader";
 
-const ZorunluDersler = ({ courses }) => {
+const MandatoryCourses = ({ courses }) => {
   const theme = useTheme();
   const { required, failed } = courses;
   console.log("required", required);
@@ -38,10 +38,12 @@ const ZorunluDersler = ({ courses }) => {
           variant="caption2"
           color="info.darker"
         >
-          Burada bölümünüze ait açmış veya daha önceki dönemlerinizde kaldığınız dersler yer almaktadır.
-          (Önceki dönemde kalıp
-          bu dönem açılmamışsa otomatik kayıtlıdır ve o dersleri burada göremiyorsunuz.)
-          Mezun olabilmek için tamamlamanız zorunlu derslerdir.
+          Under the mandatory courses tab, there are courses that are included
+          in your semester or that you have experienced in previous semesters.
+          (If the previous all-region course was held in the semester you are
+          currently enrolled in, it will be automatically registered and you
+          cannot remove that course.) These are compulsory courses to be
+          completed in order to graduate.
         </Typography>
       </Box>
       <SelectSubjectsTableHeader />
@@ -69,7 +71,7 @@ const ZorunluDersler = ({ courses }) => {
             textAlign="center"
             variant="subtitle2"
           >
-            Ders bulunamadı.
+            No courses found!
           </Typography>
         )}
       </Box>
@@ -77,4 +79,4 @@ const ZorunluDersler = ({ courses }) => {
   );
 };
 
-export default ZorunluDersler;
+export default MandatoryCourses;

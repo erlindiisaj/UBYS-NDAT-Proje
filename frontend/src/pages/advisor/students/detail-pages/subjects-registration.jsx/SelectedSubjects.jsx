@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles";
 
 import { selectedSubjectsAkts } from "store/selected-subjects/selected-subjects.selector";
 import { selectSelectedSubjects } from "store/selected-subjects/selected-subjects.selector";
-import SecilmisDers from "pages/student/subjects-selection/components/SecilmisDers";
+import SecilmisDers from "pages/student/subjects-selection/components/SelectedCourses";
 
 const SelectedSubjects = () => {
   const selectedAkts = useSelector(selectedSubjectsAkts);

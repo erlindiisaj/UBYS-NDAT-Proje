@@ -1,4 +1,4 @@
-import Ders from "../Ders";
+import Ders from "../Course";
 import { Data } from "data";
 
 import { Box, Typography } from "@mui/material";
@@ -6,7 +6,7 @@ import { useTheme } from "@mui/material/styles";
 
 import SelectSubjectsTableHeader from "components/SelectSubjectsTableHeader";
 
-const BasariliOnunanDersler = ({ courses }) => {
+const SucceededCourses = ({ courses }) => {
   const theme = useTheme();
 
   return (
@@ -38,9 +38,9 @@ const BasariliOnunanDersler = ({ courses }) => {
           variant="caption2"
           color="info.darker"
         >
-          Başarılı olunan derslerim tabında daha önce aldığınız ve başarılı
-          olduğunuz dersler yer almaktadır. Not yükseltme amacı ile bu
-          derslerden seçebilirsiniz.
+          In the Succeeded Courses tab, you can find the courses you have
+          previously taken and succeeded in. You can choose from these courses
+          to increase your grades.
         </Typography>
       </Box>
       <SelectSubjectsTableHeader />
@@ -63,7 +63,7 @@ const BasariliOnunanDersler = ({ courses }) => {
             textAlign="center"
             variant="subtitle2"
           >
-            Ders bulunamadı.
+            No courses found!
           </Typography>
         )}
       </Box>
@@ -71,4 +71,4 @@ const BasariliOnunanDersler = ({ courses }) => {
   );
 };
 
-export default BasariliOnunanDersler;
+export default SucceededCourses;

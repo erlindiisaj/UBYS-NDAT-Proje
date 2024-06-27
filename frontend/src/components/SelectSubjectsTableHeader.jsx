@@ -19,7 +19,7 @@ const SelectSubjectsTableHeader = () => {
           alignItems: "center",
         }}
       >
-        Seç
+        Select
       </Typography>
       <Typography
         variant="subtitle2"
@@ -29,7 +29,7 @@ const SelectSubjectsTableHeader = () => {
           alignItems: "center",
         }}
       >
-        Ders Kodu
+        Course Code
       </Typography>
       <Typography
         variant="subtitle2"
@@ -40,7 +40,7 @@ const SelectSubjectsTableHeader = () => {
           alignItems: "center",
         }}
       >
-        Ders Adı
+        Name
       </Typography>
       <Typography
         variant="subtitle2"
@@ -61,7 +61,7 @@ const SelectSubjectsTableHeader = () => {
           alignItems: "center",
         }}
       >
-        Şube
+        Class
       </Typography>
       <Typography
         variant="subtitle2"
@@ -71,7 +71,7 @@ const SelectSubjectsTableHeader = () => {
           alignItems: "center",
         }}
       >
-        Açıklama
+        Description
       </Typography>
     </Box>
   );

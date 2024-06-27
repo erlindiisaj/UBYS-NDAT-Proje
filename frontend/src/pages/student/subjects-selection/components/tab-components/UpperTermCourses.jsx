@@ -1,4 +1,4 @@
-import Ders from "../Ders";
+import Ders from "../Course";
 import { Data } from "data";
 
 import { Box, Typography } from "@mui/material";
@@ -6,7 +6,7 @@ import { useTheme } from "@mui/material/styles";
 
 import SelectSubjectsTableHeader from "components/SelectSubjectsTableHeader";
 
-const UstDonemDersler = ({ courses }) => {
+const UpperTermCourses = ({ courses }) => {
   const theme = useTheme();
   return (
     <Box
@@ -37,7 +37,8 @@ const UstDonemDersler = ({ courses }) => {
           variant="caption2"
           color="info.darker"
         >
-          Üst dönem dersleri tabında üst döneminize ait dersler bulunmaktadır.
+          There are courses form your upper semester in the upper semester
+          courses tab.
         </Typography>
       </Box>
       <SelectSubjectsTableHeader />
@@ -60,7 +61,7 @@ const UstDonemDersler = ({ courses }) => {
             textAlign="center"
             variant="subtitle2"
           >
-            Ders bulunamadı.
+            No courses found!
           </Typography>
         )}
       </Box>
@@ -68,4 +69,4 @@ const UstDonemDersler = ({ courses }) => {
   );
 };
 
-export default UstDonemDersler;
+export default UpperTermCourses;

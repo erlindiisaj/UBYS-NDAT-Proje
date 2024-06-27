@@ -6,7 +6,7 @@ import DeleteForeverRoundedIcon from "@mui/icons-material/DeleteForeverRounded";
 import { removeSubjectFromStore } from "store/selected-subjects/selected-subjects.action";
 import { selectSelectedSubjects } from "store/selected-subjects/selected-subjects.selector";
 
-const SecilmisDers = ({ data, index }) => {
+const SelectedCourses = ({ data, index }) => {
   const { courseCode, courseName, akts, type } = data;
 
   const dispatch = useDispatch();
@@ -52,4 +52,4 @@ const SecilmisDers = ({ data, index }) => {
   );
 };
 
-export default SecilmisDers;
+export default SelectedCourses;

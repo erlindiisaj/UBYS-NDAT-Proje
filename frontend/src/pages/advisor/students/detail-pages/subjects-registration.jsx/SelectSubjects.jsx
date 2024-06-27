@@ -6,11 +6,11 @@ import { useTheme } from "@mui/material/styles";
 
 import CustomTabPanel from "components/CustomTabPanel";
 
-import SecmeliDersler from "pages/student/subjects-selection/components/tab-components/SecmeliDersler";
-import ZorunluDersler from "pages/student/subjects-selection/components/tab-components/ZorunluDersler";
-import UstDonemDersler from "pages/student/subjects-selection/components/tab-components/UstDonemDersler";
-import ProgramDisiDersler from "pages/student/subjects-selection/components/tab-components/ProgramDisiDersler";
-import BasariliOnunanDersler from "pages/student/subjects-selection/components/tab-components/BasariliOnunanDersler";
+import SecmeliDersler from "pages/student/subjects-selection/components/tab-components/OptionalCourses";
+import ZorunluDersler from "pages/student/subjects-selection/components/tab-components/MandatoryCourses";
+import UstDonemDersler from "pages/student/subjects-selection/components/tab-components/UpperTermCourses";
+import ProgramDisiDersler from "pages/student/subjects-selection/components/tab-components/ExtracurricularCourses";
+import BasariliOnunanDersler from "pages/student/subjects-selection/components/tab-components/SucceededCourses";
 
 const SelectSubjects = () => {
   const theme = useTheme();
